@@ -91,7 +91,16 @@
         //User inputs mixed case input and matches are still found
         //input -> "HeLlO" | "hello, HELLO, hi"
         //output-> 2
+        function test_countRepeats_mixed_case()
+        {
+            $test_countRepeats = new RepeatCounter;
+            $input_word = "HeLlO";
+            $input_list = "hello, HELLO, hi";
 
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+
+            $this->assertEquals(2, $result);
+        }
 
 
     }
