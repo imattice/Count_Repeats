@@ -3,11 +3,13 @@
         function countRepeats($input_word, $input_array){
 
             $count = 0;
-            if ($input_word = $input_array) {
+            if ($input_word == $input_array) {
                 $count++;
+                return $count;
+            } else {
+                return "No matches found.";
             };
 
-            return $count;
         }
     }
 ?>
