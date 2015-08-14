@@ -20,6 +20,16 @@
         //User inputs a single letter and it is not found in an array without any matching letters
         // input-> "b" | "c"
         // output-> "No matches found."
+        function test_countRepeats_single_letter_no_match()
+        {
+            $test_countRepeats = new RepeatCounter;
+            $input_word = "b";
+            $input_list = "c";
+
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+
+            $this->assertEquals("No matches found.", $result);
+        }
 
         //User inputs a single letter and it is found, but does not count the unmatched letters
         // input -> "d" | "d", "e", "f"
