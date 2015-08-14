@@ -34,6 +34,16 @@
         //User inputs a single letter and it is found, but does not count the unmatched letters
         // input -> "d" | "d", "e", "f"
         // output-> 1
+        function test_countRepeats_single_letter_single_match_in_array()
+        {
+            $test_countRepeats = new RepeatCounter;
+            $input_word = "d";
+            $input_list = "d, e, f";
+
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+
+            $this->assertEquals(1, $result);
+        }
 
         //User inputs an array with multiple matches and each match is counted
         //input-> "g" | "g", "g", "n", "g", "t"
