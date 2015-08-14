@@ -60,8 +60,18 @@
         }
 
         //User inputs a two-charactor string and it's match is counted in an array of strings
-        // input -> "hh" | "hh", "hi", "ij"
+        // input -> "hh" | "hh", "hi", "ij", "hh"
         // output -> 1
+        function test_countRepeats_multi_letter_multi_match()
+        {
+            $test_countRepeats = new RepeatCounter;
+            $input_word = "hh";
+            $input_list = "hh, hi, ij, hh";
+
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+
+            $this->assertEquals(2, $result);
+        }
 
         //User can enter full words and parital matches will not be counted
         // input-> "Good" | "Hello", "Goodbye", "Good Morning", "Good"
