@@ -67,5 +67,11 @@
         // input-> "Good" | "Hello", "Goodbye", "Good Morning", "Good"
         // output -> 1
 
+        //User inputs mixed case input and matches are still found
+        //input -> "HeLlO" | "hello, HELLO, hi"
+        //output-> 2
+
+
+
     }
 ?>
