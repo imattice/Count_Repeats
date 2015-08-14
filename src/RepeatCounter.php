@@ -1,7 +1,7 @@
 <?php
     class RepeatCounter {
-        function countRepeats{
-            
+        function countRepeats(){
+
         }
     }
 ?>
