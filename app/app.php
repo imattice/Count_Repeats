@@ -12,7 +12,7 @@
         return $app['twig']->render('form.html.twig');
     });
 
-    $app->get("results", function() use($app){
+    $app->get("/results", function() use($app){
         $input = $_GET['input'];
         $repeats = new RepeatCounter;
         return $app['twig']->render('results.html.twig', array('input' => input, 'result' => $repeats->countRepeats($input)));
