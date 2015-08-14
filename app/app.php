@@ -17,4 +17,6 @@
         $repeats = new RepeatCounter;
         return $app['twig']->render('results.html.twig', array('input' => input, 'result' => $repeats->countRepeats($input)));
     });
+
+    return $app;
 ?>
