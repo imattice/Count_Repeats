@@ -48,6 +48,16 @@
         //User inputs an array with multiple matches and each match is counted
         //input-> "g" | "g", "g", "n", "g", "t"
         //output-> 3
+        function test_countRepeats_single_letter_multiple_match_in_array()
+        {
+            $test_countRepeats = new RepeatCounter;
+            $input_word = "g";
+            $input_list = "g, g, n, g, t";
+
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+
+            $this->assertEquals(3, $result);
+        }
 
         //User inputs a two-charactor string and it's match is counted in an array of strings
         // input -> "hh" | "hh", "hi", "ij"
