@@ -17,9 +17,12 @@
     });
 
     $app->get("/results", function() use($app){
-        $input = $_GET['input'];
         $repeats = new RepeatCounter;
-        return $app['twig']->render('results.html.twig', array('input' => input, 'result' => $repeats->countRepeats($input)));
+        $input_word = $_GET['input_word'];
+        $input_array = $_GET['input_array'];
+        $new_counter = $repeats->countRepeats($input_word, $input_array);
+        return $app['twig']->render('results.html.twig', array('input' => $input_word, 'result' => $new_counter));
+
     });
 
     return $app;

@@ -8,7 +8,7 @@
             //counter
             $count = 0;
             //takes the input list string and converts to an array
-            $exploded_array = explode(", ", $lcinput_array);
+            $exploded_array = explode(" ", $lcinput_array);
             //empty result variable which will hold the result of our logic
             $result = "";
 
