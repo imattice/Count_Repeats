@@ -9,10 +9,10 @@
         function test_countRepeats_single_letter_match()
         {
             $test_countRepeats = new RepeatCounter;
-            $input_letter = "a";
+            $input_word = "a";
             $input_list = "a";
 
-            $result = $test_RepeatCounter->countRepeats($input_letter, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
 
             $this->assertEquals(1, $result);
         }
