@@ -77,6 +77,17 @@
         // input-> "Good" | "Hello", "Goodbye", "Good Morning", "Good"
         // output -> 1
 
+        function test_countRepeats_no_parital_matches()
+        {
+            $test_countRepeats = new RepeatCounter;
+            $input_word = "good";
+            $input_list = "hello, goodbye, good-bye, good morning, good";
+
+            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+
+            $this->assertEquals(1, $result);
+        }
+
         //User inputs mixed case input and matches are still found
         //input -> "HeLlO" | "hello, HELLO, hi"
         //output-> 2
