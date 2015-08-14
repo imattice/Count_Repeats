@@ -10,9 +10,9 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "a";
-            $input_list = "a";
+            $input_array = "a";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
             $this->assertEquals(1, $result);
         }
@@ -24,11 +24,11 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "b";
-            $input_list = "c";
+            $input_array = "c";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
-            $this->assertEquals("No matches found.", $result);
+            $this->assertEquals("no matches found.", $result);
         }
 
         //User inputs a single letter and it is found, but does not count the unmatched letters
@@ -38,9 +38,9 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "d";
-            $input_list = "d, e, f";
+            $input_array = "d, e, f";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
             $this->assertEquals(1, $result);
         }
@@ -52,9 +52,9 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "g";
-            $input_list = "g, g, n, g, t";
+            $input_array = "g, g, n, g, t";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
             $this->assertEquals(3, $result);
         }
@@ -66,9 +66,9 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "hh";
-            $input_list = "hh, hi, ij, hh";
+            $input_array = "hh, hi, ij, hh";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
             $this->assertEquals(2, $result);
         }
@@ -81,9 +81,9 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "good";
-            $input_list = "hello, goodbye, good-bye, good morning, good";
+            $input_array = "hello, goodbye, good-bye, good morning, good";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
             $this->assertEquals(1, $result);
         }
@@ -95,9 +95,9 @@
         {
             $test_countRepeats = new RepeatCounter;
             $input_word = "HeLlO";
-            $input_list = "hello, HELLO, hi";
+            $input_array = "hello, HELLO, hi";
 
-            $result = $test_countRepeats->countRepeats($input_word, $input_list);
+            $result = $test_countRepeats->countRepeats($input_word, $input_array);
 
             $this->assertEquals(2, $result);
         }

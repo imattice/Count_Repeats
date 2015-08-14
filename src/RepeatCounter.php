@@ -8,7 +8,7 @@
             //counter
             $count = 0;
             //takes the input list string and converts to an array
-            $exploded_array = explode(" ", $lcinput_array);
+            $exploded_array = explode(", ", $lcinput_array);
             //empty result variable which will hold the result of our logic
             $result = "";
 
@@ -24,7 +24,7 @@
 
             //if no matches have been found, return string notifying the user
             if ($count == 0){
-                $result = "No matches found.";
+                $result = "no matches found.";
             //if matches were found, replaces the empty variable with the numner of matches
             } else {
                 $result = $count;
